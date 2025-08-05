@@ -1,0 +1,38 @@
+# nRF52832 OTA 分区示例
+
+flash:
+  size: 512k
+  base_address: 0x0
+
+partitions:
+  - name: mcuboot
+    address: 0x0
+    size: 48k
+    region: flash_primary
+    read: true
+    write: false
+    execute: true
+
+  - name: slot0
+    address: 0xc000
+    size: 240k
+    region: flash_primary
+    read: true
+    write: true
+    execute: true
+
+  - name: slot1
+    address: 0x48000
+    size: 240k
+    region: flash_primary
+    read: true
+    write: true
+    execute: false
+
+  - name: settings_storage
+    address: 0x7c000
+    size: 16k
+    region: flash_primary
+    read: true
+    write: true
+    execute: false

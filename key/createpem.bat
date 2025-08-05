@@ -1,0 +1,1 @@
+imgtool keygen -k filename.pem -t ecdsa-p256
